@@ -12,7 +12,7 @@ Please don't see these assignments as regular class assignments. The main purpos
 
 You need to create a game for this assignment. This is a two-player game played in turns. One of the players is the **_Proposer_** and the other one is the **_Responder_**. The scenario is as follows:
 
-- Proposer has 10 TL
+- Proposer has \$10
 - Proposer decides how to split this amount between himself and the Receiver
 - Receiver is informed of the proposed allocation.
 - Then, the receiver can:
@@ -21,8 +21,8 @@ You need to create a game for this assignment. This is a two-player game played 
 
 ## Example Game
 
-- Proposer splits the money as follows: 7 TL for herself, 3 TL for the Receiver
+- Proposer splits the money as follows: $7 for herself, $3 for the Receiver
 - Receiver is informed of the proposed allocation.
 - Based on the receiver's decision:
-  - Receiver **accepts** the offer. Proposer gets 7 TL and Responder gets 3 TL as payoff.
+  - Receiver **accepts** the offer. Proposer gets $7 and Responder gets $3 as payoff.
   - Receiver **rejects** the offer. Neither the Proposer nor the Receiver gets anything.
