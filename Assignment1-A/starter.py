@@ -1,11 +1,13 @@
-print('Welcome to Ultimatum Game!')
-print('Ultimatum Game has Two Characters: The Proposer & The Responder')
+print('Welcome to the ultimatum bargaining game!')
+print('This game has two players: The proposer and the responder')
 total_amount = 10
-print(f'Proposer has given ${total_amount}')
-print('Proposer decides how to split this amount between himself and the responder')
-print('Responder is informed of the proposed allocation and asked to decide between accepting and rejecting this allocation.')
-print('If the responder accepts this allocation both proposer and responder receives payoffs according to allocation.')
-print('If the responder rejects this allocation neither proposer nor receiver gets any payoff.')
+print(f'The proposer is given ${total_amount}')
+print('Proposer decides how to split this amount between himself and the responder.')
+print('Responder is informed of the proposed allocation.')
+print('Responder decides whether to accept or reject the proposed allocation.')
+print('If the responder accepts, both proposer and responder receive payoffs according to the proposed allocation.')
+print('If the responder rejects, neither proposer nor responder receive any money.')
+print('Let\'s start!')
 
 ### Your code starts here ###
 
