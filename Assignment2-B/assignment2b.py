@@ -1,6 +1,6 @@
 import random
 
-# In your code don't directly use numbers, but use this variables
+# In your code don't directly use numbers, but use this variables.
 payoffs = {}
 players_guesses = {}
 number_of_balls = 100
@@ -12,9 +12,13 @@ prize = 20
 all_possible_players = ['AHMET', 'CEREN', 'GUL SENA', 'HASAN CAN', 'ABDULLAH','AHMET','AHMET','AHMET','ALI','ALI','ALI','ALP','ARDA','ATA','AYSE','BERFIN','BERKER','BEYZA','BINNAZ','CANAN','CEMRE','DEMET','DENIZ','DENIZ','DENIZ','DILARA','DILARA','DORUK','DUYGU','EBRU','ECE','ECEM','EDA','EGEHAN','EKIN','EMIR','EMIRHAN','EZGI','EZGI','FATMANUR','FURKAN','GAMZE','GAMZE','GOKCE','GONCA','HALIS','ILAYDA','IREM','IREM','IRIS','KAMRAN','KEMAL','KUBRA','LACIN','MAHMUT','MAHSA','MARCO','MEHMET','MELIKE','MELIS','MERT','MEVA','MOHSEN','MUSTAFA','NARINSU','NAZ','PELIN','PIETRO','SELIN','SEYIT','SEYMA','SOZERI','SUNDUZ','TUBA','TUTKU','UMUT','YAGMUR','YAREN','YUSUF','ZEYNEP','ZEYNEP']
 players = random.sample(all_possible_players, number_of_players)
 
-# This method is already given to you to show the players in the game
-def print_players_in_the_game():
-  print(f'Players in the game: \n{", ".join(players)}\nOrder of players is determined randomly.' )
+# This method is already given to you to show the definiton of game and players in the game.
+def print_game():
+    print('This is a five-player game played in turns where the players try to \n\
+guess if a jar containing blue and red balls has mostly blue or mostly\n\
+red balls. If a player’s guess is correct, the player gets 20$. If it \n\
+is false, the player gets 0$. ')
+    print(f'\nPlayers in the game: \n{", ".join(players)}\n\Order of players has determined randomly.')
 
 # This method creates and returns jar that contains number_of_balls balls and color ratio is color_ratio.
 def create_jar():
@@ -43,7 +47,7 @@ def print_players_guesses():
 #Make sure that the player enters a valid contribution (allowed inputs just red or blue)
 #Inform current player about previous players' choices.
 def take_player_inputs(jar):
-    print('\n' * 20)
+    print('\n')
     for player in players:
         print_players_guesses()
         ball = random.choice(jar)
@@ -83,7 +87,7 @@ def save_to_file():
         payoffs_file.write(line_str)
     payoffs_file.close()
 
-
+print_game()
 jar = create_jar()
 take_player_inputs(jar)
 calculate_payoffs()
