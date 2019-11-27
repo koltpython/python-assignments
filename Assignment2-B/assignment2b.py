@@ -18,7 +18,7 @@ def print_game():
 guess if a jar containing blue and red balls has mostly blue or mostly\n\
 red balls. If a player’s guess is correct, the player gets 20$. If it \n\
 is false, the player gets 0$. ')
-    print(f'\nPlayers in the game: \n{", ".join(players)}\n\Order of players has determined randomly.')
+    print(f'\nPlayers in the game: \n{", ".join(players)}\nOrder of players has determined randomly.')
 
 # This method creates and returns jar that contains number_of_balls balls and color ratio is color_ratio.
 def create_jar():
