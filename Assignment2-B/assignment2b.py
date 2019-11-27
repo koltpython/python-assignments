@@ -4,13 +4,17 @@ import random
 payoffs = {}
 players_guesses = {}
 number_of_balls = 100
+number_of_players = 5
 red_ratio = 0.4
 prize = 20
-number_of_players = 5
 
 # This line chooses random players from our class
 all_possible_players = ['AHMET', 'CEREN', 'GUL SENA', 'HASAN CAN', 'ABDULLAH','AHMET','AHMET','AHMET','ALI','ALI','ALI','ALP','ARDA','ATA','AYSE','BERFIN','BERKER','BEYZA','BINNAZ','CANAN','CEMRE','DEMET','DENIZ','DENIZ','DENIZ','DILARA','DILARA','DORUK','DUYGU','EBRU','ECE','ECEM','EDA','EGEHAN','EKIN','EMIR','EMIRHAN','EZGI','EZGI','FATMANUR','FURKAN','GAMZE','GAMZE','GOKCE','GONCA','HALIS','ILAYDA','IREM','IREM','IRIS','KAMRAN','KEMAL','KUBRA','LACIN','MAHMUT','MAHSA','MARCO','MEHMET','MELIKE','MELIS','MERT','MEVA','MOHSEN','MUSTAFA','NARINSU','NAZ','PELIN','PIETRO','SELIN','SEYIT','SEYMA','SOZERI','SUNDUZ','TUBA','TUTKU','UMUT','YAGMUR','YAREN','YUSUF','ZEYNEP','ZEYNEP']
 players = random.sample(all_possible_players, number_of_players)
+
+# This method is already given to you to show the players in the game
+def print_players_in_the_game():
+  print(f'Players in the game: \n{", ".join(players)}\nOrder of players is determined randomly.' )
 
 # This method creates and returns jar that contains number_of_balls balls and color ratio is color_ratio.
 def create_jar():
@@ -39,7 +43,6 @@ def print_players_guesses():
 #Make sure that the player enters a valid contribution (allowed inputs just red or blue)
 #Inform current player about previous players' choices.
 def take_player_inputs(jar):
-    random.shuffle(players)
     print('\n' * 20)
     for player in players:
         print_players_guesses()
@@ -50,7 +53,6 @@ def take_player_inputs(jar):
             guess = input(f'{player} make a guess: ')
         players_guesses[player] = guess
         print('\n' * 20)
-    players.sort()
 
 #This method calculates payoff of each player, keeps it in a dictionary.
 def calculate_payoffs():
@@ -80,7 +82,7 @@ def save_to_file():
         line_str = ', '.join(str_items) + '\n'
         payoffs_file.write(line_str)
     payoffs_file.close()
-    
+
 
 jar = create_jar()
 take_player_inputs(jar)
