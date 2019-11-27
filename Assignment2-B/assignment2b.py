@@ -43,9 +43,9 @@ def print_players_guesses():
         print(f"{player}'s choice is {players_guesses[player]}")
     print()
 
-#For each player take the player guess as a string
-#Make sure that the player enters a valid contribution (allowed inputs just red or blue)
-#Inform current player about previous players' choices.
+# For each player take the player guess as a string
+# Make sure that the player enters a valid contribution (allowed inputs just red or blue)
+# Inform current player about previous players' choices.
 def take_player_inputs(jar):
     print('\n')
     for player in players:
