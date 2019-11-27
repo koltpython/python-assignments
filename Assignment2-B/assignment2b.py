@@ -5,7 +5,7 @@ payoffs = {}
 players_guesses = {}
 number_of_balls = 100
 number_of_players = 5
-red_ratio = 0.4
+red_ratio = random.uniform(0, 1)
 prize = 20
 
 # This line chooses random players from our class
@@ -18,7 +18,7 @@ def print_game():
 guess if a jar containing blue and red balls has mostly blue or mostly\n\
 red balls. If a player’s guess is correct, the player gets 20$. If it \n\
 is false, the player gets 0$. ')
-    print(f'\nPlayers in the game: \n{", ".join(players)}\nOrder of players has determined randomly.')
+    print(f'\nPlayers in the game: \n{", ".join(players)}\nOrder of players has determined randomly. ')
 
 # This method creates and returns jar that contains number_of_balls balls and color ratio is color_ratio.
 def create_jar():
@@ -68,9 +68,9 @@ def calculate_payoffs():
 
 #This method prints the players' payoffs at the end of program.
 def print_payoffs():
-    print(f'Since there were more {jar_contains_mostly()} balls,')
+    print(f'Since there were more {jar_contains_mostly()} balls, ')
     for player in players:
-        print(f'{player} earns ${payoffs[player]}.')
+        print(f'{player} earns ${payoffs[player]}. ')
 
 
 # Write to a file named payoffs.csv
